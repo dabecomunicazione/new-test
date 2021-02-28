@@ -1,0 +1,125 @@
+/*-----------
+GENERAL
+-------------*/
+*, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica';
+}
+$primary-color: #330000;
+
+.content{
+  width: 800px;
+  margin: auto;
+}
+/*-----------
+THEME LIGHT OR DARK
+-------------*/
+.lightTheme{
+  background: #fff;
+  color: #000;
+}
+.darkTheme{
+  background: $primary-color;
+  color: #fff;
+  .btn{
+      border: 2px solid #fff;
+  }
+  .title{
+    color: #fff;
+  }
+  nav a{
+    color: #fff;
+  }
+  .accordion-title{
+    border-bottom: 3px solid #fff;
+  }
+  li:hover{
+    background: #fff;
+    a{
+      color: $primary-color;
+    }
+  }
+}
+
+/*-----------
+NAV
+-------------*/
+nav{
+  height: 120px;
+  ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+  }
+  li{
+    padding: 30px;
+    &:hover{
+      background: $primary-color;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+}
+
+.btn{
+  border: 2px solid $primary-color;
+  padding: 30px;
+  text-align: center;
+  margin: 30px auto;
+  width: 50%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.title{
+  padding-bottom: 30px;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: $primary-color;
+}
+.paragraph{
+  display: grid;
+  grid-template-columns:  25% 40% 10% 25%;
+  grid-template-rows:  30% 400px auto;
+  .firstParagraph{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .secondParagraph{
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+}
+
+
+/*-------------
+ACCORDION
+--------------*/
+.accordion-title{
+  border-bottom: 3px solid $primary-color;
+}
+.accordion-content{
+height: 0px;
+overflow: hidden;
+}
+.is-open{
+  background: #ccc;
+  overflow: auto;
+  height: 80px;
+  padding: 30px;
+}
